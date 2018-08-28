@@ -6687,6 +6687,44 @@ Here is a six pin vertical 1.0mm pitch connector. It is useful if you need somet
 </deviceset>
 </devicesets>
 </library>
+<library name="BurnWire">
+<packages>
+<package name="BURNWIRE">
+<hole x="0.8" y="0" drill="1"/>
+<hole x="-0.8" y="0" drill="1"/>
+<smd name="V+" x="2.3" y="0" dx="1.27" dy="1.27" layer="1"/>
+<smd name="V-" x="-2.3" y="0" dx="1.27" dy="1.27" layer="1"/>
+</package>
+</packages>
+<symbols>
+<symbol name="BURNWIRE">
+<wire x1="-7.62" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<pin name="V-" x="-12.7" y="0" length="middle"/>
+<pin name="V+" x="12.7" y="0" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BURNWIRE">
+<gates>
+<gate name="G$1" symbol="BURNWIRE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BURNWIRE">
+<connects>
+<connect gate="G$1" pin="V+" pad="V+"/>
+<connect gate="G$1" pin="V-" pad="V-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6718,6 +6756,13 @@ Here is a six pin vertical 1.0mm pitch connector. It is useful if you need somet
 <part name="U$1" library="KickSat-Logo" deviceset="KICKSAT_LOGO" device=""/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="EM406" device="" package3d_urn="urn:adsk.eagle:package:38023/1"/>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND2" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND4" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND5" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND6" library="SparkFun" deviceset="GND" device=""/>
+<part name="U$2" library="BurnWire" deviceset="BURNWIRE" device=""/>
+<part name="U$3" library="BurnWire" deviceset="BURNWIRE" device=""/>
+<part name="U$4" library="BurnWire" deviceset="BURNWIRE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6780,6 +6825,13 @@ Here is a six pin vertical 1.0mm pitch connector. It is useful if you need somet
 <instance part="U$1" gate="G$1" x="218.44" y="25.4"/>
 <instance part="J1" gate="G$1" x="175.26" y="91.44"/>
 <instance part="GND3" gate="1" x="144.78" y="96.52"/>
+<instance part="GND2" gate="1" x="144.78" y="86.36"/>
+<instance part="GND4" gate="1" x="111.76" y="58.42"/>
+<instance part="GND5" gate="1" x="111.76" y="48.26"/>
+<instance part="GND6" gate="1" x="111.76" y="38.1"/>
+<instance part="U$2" gate="G$1" x="127" y="60.96"/>
+<instance part="U$3" gate="G$1" x="127" y="50.8"/>
+<instance part="U$4" gate="G$1" x="127" y="40.64"/>
 </instances>
 <busses>
 </busses>
@@ -6801,9 +6853,9 @@ Here is a six pin vertical 1.0mm pitch connector. It is useful if you need somet
 <label x="58.42" y="142.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="165.1" y1="96.52" x2="149.86" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="J1" gate="G$1" pin="VCC"/>
-<label x="149.86" y="96.52" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="1PPS"/>
+<wire x1="165.1" y1="86.36" x2="149.86" y2="86.36" width="0.1524" layer="91"/>
+<label x="149.86" y="86.36" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$37" class="0">
@@ -6871,6 +6923,63 @@ Here is a six pin vertical 1.0mm pitch connector. It is useful if you need somet
 <pinref part="J1" gate="G$1" pin="GND1"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="165.1" y1="99.06" x2="144.78" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="GND2"/>
+<wire x1="165.1" y1="88.9" x2="147.32" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="1" pin="GND"/>
+<wire x1="147.32" y1="88.9" x2="144.78" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="114.3" y1="60.96" x2="111.76" y2="60.96" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="V-"/>
+</segment>
+<segment>
+<pinref part="GND5" gate="1" pin="GND"/>
+<wire x1="114.3" y1="50.8" x2="111.76" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="V-"/>
+</segment>
+<segment>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="114.3" y1="40.64" x2="111.76" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="V-"/>
+</segment>
+</net>
+<net name="VBURN1" class="0">
+<segment>
+<pinref part="J1" gate="G$1" pin="VCC"/>
+<wire x1="165.1" y1="96.52" x2="149.86" y2="96.52" width="0.1524" layer="91"/>
+<label x="149.86" y="96.52" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="139.7" y1="60.96" x2="149.86" y2="60.96" width="0.1524" layer="91"/>
+<label x="139.7" y="60.96" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="V+"/>
+</segment>
+</net>
+<net name="VBURN2" class="0">
+<segment>
+<pinref part="J1" gate="G$1" pin="RX"/>
+<wire x1="165.1" y1="93.98" x2="149.86" y2="93.98" width="0.1524" layer="91"/>
+<label x="149.86" y="93.98" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="139.7" y1="50.8" x2="149.86" y2="50.8" width="0.1524" layer="91"/>
+<label x="139.7" y="50.8" size="1.778" layer="95"/>
+<pinref part="U$3" gate="G$1" pin="V+"/>
+</segment>
+</net>
+<net name="VBURN3" class="0">
+<segment>
+<pinref part="J1" gate="G$1" pin="TX"/>
+<wire x1="165.1" y1="91.44" x2="149.86" y2="91.44" width="0.1524" layer="91"/>
+<label x="149.86" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="139.7" y1="40.64" x2="149.86" y2="40.64" width="0.1524" layer="91"/>
+<label x="139.7" y="40.64" size="1.778" layer="95"/>
+<pinref part="U$4" gate="G$1" pin="V+"/>
 </segment>
 </net>
 </nets>
