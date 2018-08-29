@@ -6826,12 +6826,12 @@ Here is a six pin vertical 1.0mm pitch connector. It is useful if you need somet
 <instance part="J1" gate="G$1" x="175.26" y="91.44"/>
 <instance part="GND3" gate="1" x="144.78" y="96.52"/>
 <instance part="GND2" gate="1" x="144.78" y="86.36"/>
-<instance part="GND4" gate="1" x="111.76" y="58.42"/>
-<instance part="GND5" gate="1" x="111.76" y="48.26"/>
-<instance part="GND6" gate="1" x="111.76" y="38.1"/>
-<instance part="U$2" gate="G$1" x="127" y="60.96"/>
-<instance part="U$3" gate="G$1" x="127" y="50.8"/>
-<instance part="U$4" gate="G$1" x="127" y="40.64"/>
+<instance part="GND4" gate="1" x="144.78" y="149.86"/>
+<instance part="GND5" gate="1" x="144.78" y="139.7"/>
+<instance part="GND6" gate="1" x="144.78" y="129.54"/>
+<instance part="U$2" gate="G$1" x="160.02" y="152.4"/>
+<instance part="U$3" gate="G$1" x="160.02" y="142.24"/>
+<instance part="U$4" gate="G$1" x="160.02" y="132.08"/>
 </instances>
 <busses>
 </busses>
@@ -6932,17 +6932,17 @@ Here is a six pin vertical 1.0mm pitch connector. It is useful if you need somet
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="114.3" y1="60.96" x2="111.76" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="152.4" x2="144.78" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="V-"/>
 </segment>
 <segment>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="114.3" y1="50.8" x2="111.76" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="142.24" x2="144.78" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="U$3" gate="G$1" pin="V-"/>
 </segment>
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="114.3" y1="40.64" x2="111.76" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="132.08" x2="144.78" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="U$4" gate="G$1" pin="V-"/>
 </segment>
 </net>
@@ -6953,8 +6953,8 @@ Here is a six pin vertical 1.0mm pitch connector. It is useful if you need somet
 <label x="149.86" y="96.52" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="139.7" y1="60.96" x2="149.86" y2="60.96" width="0.1524" layer="91"/>
-<label x="139.7" y="60.96" size="1.778" layer="95"/>
+<wire x1="172.72" y1="152.4" x2="182.88" y2="152.4" width="0.1524" layer="91"/>
+<label x="172.72" y="152.4" size="1.778" layer="95"/>
 <pinref part="U$2" gate="G$1" pin="V+"/>
 </segment>
 </net>
@@ -6965,8 +6965,8 @@ Here is a six pin vertical 1.0mm pitch connector. It is useful if you need somet
 <label x="149.86" y="93.98" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="139.7" y1="50.8" x2="149.86" y2="50.8" width="0.1524" layer="91"/>
-<label x="139.7" y="50.8" size="1.778" layer="95"/>
+<wire x1="172.72" y1="142.24" x2="182.88" y2="142.24" width="0.1524" layer="91"/>
+<label x="172.72" y="142.24" size="1.778" layer="95"/>
 <pinref part="U$3" gate="G$1" pin="V+"/>
 </segment>
 </net>
@@ -6977,8 +6977,8 @@ Here is a six pin vertical 1.0mm pitch connector. It is useful if you need somet
 <label x="149.86" y="91.44" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="139.7" y1="40.64" x2="149.86" y2="40.64" width="0.1524" layer="91"/>
-<label x="139.7" y="40.64" size="1.778" layer="95"/>
+<wire x1="172.72" y1="132.08" x2="182.88" y2="132.08" width="0.1524" layer="91"/>
+<label x="172.72" y="132.08" size="1.778" layer="95"/>
 <pinref part="U$4" gate="G$1" pin="V+"/>
 </segment>
 </net>
